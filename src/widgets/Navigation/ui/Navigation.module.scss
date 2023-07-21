@@ -1,0 +1,12 @@
+.Navigation {
+	display: flex;
+	align-items: center;
+}
+
+.link {
+	margin-left: 32px;
+
+	:first-child {
+		margin-left: 0;
+	}
+}

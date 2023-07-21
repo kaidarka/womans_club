@@ -1,10 +1,10 @@
 import React from "react";
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Source_Serif_4 } from 'next/font/google'
 import './globals.css'
-import { NavBar } from "@/widgets/NavBar/ui/NavBar";
+import { Header } from "@/widgets/Header";
 
-const inter = Inter({ subsets: ['latin'] })
+const font = Source_Serif_4({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Клуб женщин предпринимателей',
@@ -19,9 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-      <NavBar/>
-      {children}</body>
+      <body className={font.className}>
+          <Header/>
+          {children}
+      </body>
     </html>
   )
 }
