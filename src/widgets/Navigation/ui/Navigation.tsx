@@ -11,7 +11,11 @@ interface INavigationProps {
 export const Navigation = (props: INavigationProps) => {
 	const {className} = props;
 	const [isOpen, setIsOpen] = useState<boolean>(false);
-	console.log(isOpen)
+
+	const handleClickLink = () => {
+		setIsOpen(false)
+	}
+
 	return (
 		<>
 			<label className={classNames(cls.hamburger, {[cls.open]: isOpen})}>
@@ -26,13 +30,13 @@ export const Navigation = (props: INavigationProps) => {
 				className={classNames(cls.Navigation, {[cls.openNav]: isOpen}, [className])}
 			>
 
-				<Link className={cls.link} href='/'>
+				<Link className={cls.link} href='/' onClick={handleClickLink}>
 					Главная
 				</Link>
-				<Link className={cls.link} href='/services'>
+				<Link className={cls.link} href='/services' onClick={handleClickLink}>
 					Услуги
 				</Link>
-				<Link className={cls.link} href='/contacts'>
+				<Link className={cls.link} href='/contacts' onClick={handleClickLink}>
 					Контакты
 				</Link>
 			</nav>
