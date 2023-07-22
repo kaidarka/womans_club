@@ -27,9 +27,9 @@
 			right: 0;
 			bottom: 0;
 			background-color: var(--background-base);
-			justify-content: start;
+			justify-content: flex-start;
 			padding: 24px;
-			align-items: end;
+			align-items: flex-end;
 			& .link {
 				font: var(--font-m);
 				margin: 0 0 24px;
