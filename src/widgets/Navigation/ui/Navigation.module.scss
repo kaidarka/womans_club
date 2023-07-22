@@ -10,3 +10,71 @@
 		margin-left: 0;
 	}
 }
+
+.hamburger {
+	display: none;
+}
+
+@media screen and (max-width: 720px){
+	.Navigation {
+		display: none;
+		&.openNav {
+			display: flex;
+			flex-direction: column;
+			position: fixed;
+			top: var(--header-height);
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: var(--background-base);
+			justify-content: start;
+			padding: 24px;
+			align-items: end;
+			& .link {
+				font: var(--font-m);
+				margin: 0 0 24px;
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+	}
+	.hamburger {
+		cursor: pointer;
+		display: block;
+	}
+
+	.hamburger input {
+		display: none;
+	}
+
+	.hamburger svg {
+		height: 2em;
+		transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.line {
+		fill: none;
+		stroke: var(--color-base);
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 3;
+		transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+		stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.lineTopBottom {
+		stroke-dasharray: 12 63;
+	}
+
+	.hamburger.open svg {
+		transform: rotate(-45deg);
+	}
+
+	.hamburger.open svg .lineTopBottom {
+		stroke-dasharray: 20 300;
+		stroke-dashoffset: -32.42;
+	}
+
+
+}

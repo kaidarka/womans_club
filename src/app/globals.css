@@ -46,6 +46,7 @@ body {
 body {
   color: var(--color-base);
   font: var(--font-s);
+  background: var(--background-base);
 }
 
 a {

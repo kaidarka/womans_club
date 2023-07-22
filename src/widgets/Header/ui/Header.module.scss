@@ -4,3 +4,9 @@
 	align-items: center;
 	height: var(--header-height);
 }
+
+@media screen and (max-width: 720px) {
+	.logo {
+		width: 100px;
+	}
+}
