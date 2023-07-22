@@ -26,6 +26,9 @@
   --font-size-xxl: 48px;
   --font-line-xxl: 56px;
   --font-xxl: var(--font-size-xxl) / var(--font-line-xxl) var(--font-family-main);
+  --font-size-xxxl: 56px;
+  --font-line-xxxl: 64px;
+  --font-xxxl: var(--font-size-xxxl) / var(--font-line-xxxl) var(--font-family-main);
 
   --box-shadow-base: 3px 3px 10px rgba(67, 67, 67, 0.5);
   --box-shadow-primary: 3px 3px 10px rgba(67, 67, 67, 0.8);
