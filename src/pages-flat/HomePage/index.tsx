@@ -3,6 +3,8 @@ import cls from './styles.module.scss';
 import { HeroSection } from "@/pages-flat/HomePage/Sections/Hero/HeroSection";
 import { Section } from "@/shared/ui/Section/Section";
 import { AboutSection } from "@/pages-flat/HomePage/Sections/About/AboutSection";
+import { TasksSection } from "@/pages-flat/HomePage/Sections/Tasks/TasksSection";
+import { ServicesSection } from "@/pages-flat/HomePage/Sections/Services/ServicesSection";
 
 export const HomePage = () => {
 	return (
@@ -12,35 +14,10 @@ export const HomePage = () => {
 			<Section className={cls.pageWrapper}>
 				<HeroSection/>
 				<AboutSection/>
-				задачи
-				<ul>
-					<li>создание площадки возможностей для оперативной коммуникации, обмена опытом и получения новых
-						знаний
-					</li>
-					<li>обеспечение поддержки и раскрытие потенциала лидеров бизнес-сообщества</li>
-					<li>формирование и продвижение культуры содействия и партнёрства бизнес-сообществе</li>
-					<li>расширение форматов взаимодействия лидеров бизнес-сообщества с органам публичной власти с
-						целью участия в формировании политики в сфере развития предпринимательства и устойчивого
-						развития
-					</li>
-					<li>создание устойчивого института бизнес-комьюнити как основы развития гражданского общества и
-						формирования благоприятного делового климата
-					</li>
-				</ul>
-				<div>
-					Нами ведется большая работа по развитию и совершенствованию услуг, предоставляемых малому и среднему
-					бизнесу.
-				</div>
-				<div>
-					Мы оказываем широкий спектр услуг:/сделать переход внешняя ссылка раздел услуги/
-				</div>
-				<ul>
-					<li>Оценка имущества</li>
-					<li>Бизнес-планирование и финансовый аудит</li>
-					<li>Выставочная деятельность</li>
-					<li>Внешнеэкономическая деятельность</li>
-					<li>Бизнес- консультирование и пр</li>
-				</ul>
+				<TasksSection/>
+				<ServicesSection/>
+
+
 				<div>
 					Сотрудничество с Общественной организацией открывает новые возможности – начиная от создания бизнеса до его развития и процветания.
 				</div>
