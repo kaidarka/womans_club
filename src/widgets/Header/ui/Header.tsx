@@ -1,9 +1,10 @@
 import cls from './Header.module.scss';
 import classNames from "classnames";
-import Logo from "/public/logo.svg";
+import Logo from "@/shared/assets/icon/logo.svg";
 import Image from "next/image";
 import { Navigation } from "@/widgets/Navigation/ui/Navigation";
 import Link from "next/link";
+import { Section } from "@/shared/ui/Section/Section";
 
 interface IHeaderProps {
     className?: string;
@@ -12,13 +13,15 @@ interface IHeaderProps {
 export const Header = (props: IHeaderProps) => {
     const { className } = props;
     return (
-        <header
-            className={classNames(cls.Header, {}, [className])}
-        >
-            <Link href='/'>
-                <Image className={cls.logo} height={80} src={Logo} alt=''/>
-            </Link>
-           	<Navigation/>
-        </header>
+        <Section>
+            <header
+                className={classNames(cls.Header, {}, [className])}
+            >
+                <Link href='/'>
+                    <Image className={cls.logo} height={80} src={Logo} alt=''/>
+                </Link>
+                <Navigation/>
+            </header>
+        </Section>
     );
 };

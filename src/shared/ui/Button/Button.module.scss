@@ -1,0 +1,23 @@
+.Button {
+	padding: 16px 24px;
+	border-radius: var(--border-radius);
+	border: none;
+	transition: 0.3s all;
+	cursor: pointer;
+	&:hover {
+		box-shadow: var(--box-shadow-primary);
+	}
+}
+
+.primary {
+	background: var(--color-secondary);
+	color: var(--color-inverted);
+	font: var(--font-s);
+}
+
+.secondary {
+	background: none;
+	color: var(--color-secondary);
+	font: var(--font-s);
+	border: 1px solid var(--color-secondary);
+}

@@ -1,0 +1,36 @@
+.Text {
+
+}
+
+.small {
+	font: var(--font-s);
+}
+
+.medium {
+	font: var(--font-m);
+}
+
+.large {
+	font: var(--font-l);
+}
+
+.xl {
+	font: var(--font-xl);
+}
+
+.xxl {
+	font: var(--font-xxl);
+}
+
+.primaryColor {
+	color: var(--color-base);
+}
+
+.secondaryColor {
+	color: var(--color-secondary);
+}
+
+.invertedColor {
+	color: var(--color-inverted);
+}
+

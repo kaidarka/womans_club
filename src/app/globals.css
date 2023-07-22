@@ -1,22 +1,34 @@
 :root {
   --max-width: 1680px;
   --header-height: 100px;
-  --border-radius: 16px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-  'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-  'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-  --background-base: #F8F8F8;
-  --white-base: #F8F8F8;
-  --black-base: #434343;
-  --red-base: #5C0000;
+  --border-radius: 8px;
 
+  /* COLORS */
+  --color-base: #434343;
+  --color-inverted: #F8F8F8;
+  --color-secondary: #5C0000;
+  --background-base: var(--color-inverted);
+
+  /* FONTS */
+  --font-family-main: 'Source Serif Pro', 'Droid Sans Mono';
   --font-size-s: 16px;
   --font-line-s: 24px;
-  --font-s: var(--font-size-s) / var(--font-line-s);
+  --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
   --font-size-m: 24px;
+  --font-line-m: 32px;
+  --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
   --font-size-l: 32px;
+  --font-line-l: 40px;
+  --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
   --font-size-xl: 40px;
+  --font-line-xl: 48px;
+  --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
   --font-size-xxl: 48px;
+  --font-line-xxl: 56px;
+  --font-xxl: var(--font-size-xxl) / var(--font-line-xxl) var(--font-family-main);
+
+  --box-shadow-base: 3px 3px 10px rgba(67, 67, 67, 0.5);
+  --box-shadow-primary: 3px 3px 10px rgba(67, 67, 67, 0.8);
 }
 
 * {
@@ -32,16 +44,17 @@ body {
 }
 
 body {
-  color: var(--black-base);
+  color: var(--color-base);
   font: var(--font-s);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  font: inherit;
 }
 
 a:hover {
-  color: var(--red-base);
+  color: var(--color-secondary);
   text-decoration: underline;
 }
