@@ -9,6 +9,10 @@
 	:first-child {
 		margin-left: 0;
 	}
+	&.active {
+		color: var(--color-secondary);
+		text-decoration: underline;
+	}
 }
 
 .hamburger {
@@ -75,6 +79,4 @@
 		stroke-dasharray: 20 300;
 		stroke-dashoffset: -32.42;
 	}
-
-
 }

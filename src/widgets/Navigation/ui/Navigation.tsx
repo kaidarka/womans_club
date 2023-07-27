@@ -3,6 +3,8 @@ import cls from './Navigation.module.scss';
 import classNames from "classnames";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { links } from "@/widgets/Navigation/model/links";
 
 interface INavigationProps {
 	className?: string;
@@ -11,6 +13,7 @@ interface INavigationProps {
 export const Navigation = (props: INavigationProps) => {
 	const {className} = props;
 	const [isOpen, setIsOpen] = useState<boolean>(false);
+	const pathname = usePathname();
 
 	const handleClickLink = () => {
 		setIsOpen(false)
@@ -29,16 +32,19 @@ export const Navigation = (props: INavigationProps) => {
 			<nav
 				className={classNames(cls.Navigation, {[cls.openNav]: isOpen}, [className])}
 			>
-
-				<Link className={cls.link} href='/' onClick={handleClickLink}>
-					Главная
-				</Link>
-				<Link className={cls.link} href='/services' onClick={handleClickLink}>
-					Услуги
-				</Link>
-				<Link className={cls.link} href='/contacts' onClick={handleClickLink}>
-					Контакты
-				</Link>
+				{links.map(item => {
+					console.log(item.href, pathname)
+					const isActive = item.href === pathname;
+					return (
+						<Link
+							className={classNames(cls.link, {[cls.active]: isActive})} href={item.href}
+							onClick={handleClickLink}
+							key={item.href}
+						>
+							{item.label}
+						</Link>
+					)
+				})}
 			</nav>
 		</>
 	);
