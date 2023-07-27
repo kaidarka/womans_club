@@ -7,6 +7,7 @@
   --color-base: #434343;
   --color-inverted: #F8F8F8;
   --color-secondary: #5C0000;
+  --color-white: #FFFFFF;
   --background-base: var(--color-inverted);
 
   /* FONTS */
