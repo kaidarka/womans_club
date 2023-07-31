@@ -12,6 +12,7 @@ interface IHeaderProps {
 
 export const Header = (props: IHeaderProps) => {
     const { className } = props;
+    // TODO add margin
     return (
         <Section>
             <header

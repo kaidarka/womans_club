@@ -33,7 +33,6 @@ export const Navigation = (props: INavigationProps) => {
 				className={classNames(cls.Navigation, {[cls.openNav]: isOpen}, [className])}
 			>
 				{links.map(item => {
-					console.log(item.href, pathname)
 					const isActive = item.href === pathname;
 					return (
 						<Link

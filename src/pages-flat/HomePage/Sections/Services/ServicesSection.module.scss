@@ -1,0 +1,25 @@
+.ServicesSection {
+	margin: 32px 0;
+}
+
+.sectionTitle, .sectionSubtitle {
+	text-align: center;
+}
+
+.sectionSubtitle {
+	margin-top: 32px;
+}
+
+.list {
+	margin-top: 32px;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	& p {
+		margin-top: 24px;
+	}
+}
+

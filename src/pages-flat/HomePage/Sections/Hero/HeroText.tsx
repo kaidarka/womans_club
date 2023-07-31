@@ -1,6 +1,7 @@
 import cls from './HeroSection.module.scss';
 import classNames from "classnames";
 import { AsTypes, Text, TextColor, TextSize } from "@/shared/ui/Text/Text";
+import Link from "next/link";
 
 interface ITextInfoProps {
 	className?: string;
@@ -26,13 +27,17 @@ export const HeroText = (props: ITextInfoProps) => {
 				</Text>
 			</div>
 			<div>
-				<button className={cls.btn}>
-					<p>Присоединиться</p>
-					<svg strokeWidth="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" className="h-6 w-6"
-					     xmlns="http://www.w3.org/2000/svg">
-						<path d="M14 5l7 7m0 0l-7 7m7-7H3" strokeLinejoin="round" strokeLinecap="round"></path>
-					</svg>
-				</button>
+				<Link href={'/contacts'} style={{
+					textDecoration: "none"
+				}}>
+					<button className={cls.btn}>
+						<p>Присоединиться</p>
+						<svg strokeWidth="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" className="h-6 w-6"
+						     xmlns="http://www.w3.org/2000/svg">
+							<path d="M14 5l7 7m0 0l-7 7m7-7H3" strokeLinejoin="round" strokeLinecap="round"></path>
+						</svg>
+					</button>
+				</Link>
 			</div>
 		</div>
 	);

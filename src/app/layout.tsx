@@ -1,10 +1,7 @@
 import React from "react";
 import type { Metadata } from 'next'
-import { Source_Serif_4 } from 'next/font/google'
 import './globals.css'
 import { Header } from "@/widgets/Header";
-
-const font = Source_Serif_4({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
     title: 'Клуб женщин предпринимателей',
@@ -19,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className={font.className}>
+      <body>
           <Header/>
           {children}
       </body>
